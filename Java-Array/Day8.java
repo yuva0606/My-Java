@@ -1,3 +1,4 @@
+//https://www.geeksforgeeks.org/problems/maximum-product-subarray3604/1
 public class Day8 {
     public static void main(String[] args) {
         int[] arr = {3,12,15,23,33,-35,30,-40,-30,-30,-30,26,28};
