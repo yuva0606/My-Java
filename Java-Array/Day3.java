@@ -34,4 +34,27 @@ public class Day3 {
         return ans;
     }
     // if you still dont understand it try watching this video https://www.youtube.com/watch?v=svMdY6wlQ6I
+
+    //Same Type
+    static int countSubarrWithEqualZeroAndOne2(int arr[], int n)
+    {
+        int sum = 0;
+        HashMap<Integer,Integer> map = new HashMap<>();
+        map.put(sum,1);
+        int ans = 0;
+        
+       for(int i =0;i<n;i++){
+           if(arr[i] == 0)
+           arr[i] = -1;
+           
+           sum += arr[i];
+           if(map.containsKey(sum)){
+               ans += map.get(sum);
+              map.put(sum,map.get(sum)+1);
+           }
+          else
+          map.put(sum,1);
+       }
+       return ans;
+    }
 }
